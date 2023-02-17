@@ -17,29 +17,22 @@
       <div class="col-lg-6 mt-4">
         <div class="card text-center">
           <div class="card-header">
-            <h3 class="fw-bold">Module 1 Assignment 4 Requirements</h3>
+            <h3 class="fw-bold">Module 2 Assignment 2 Requirements</h3>
             <p class="lead fs-6">
-              (Health application: BMI) Write a program that calculates a person's BMI.Use the following website to use
-              the American Cancer Society indexes for BMI calculation.
+              (Find the number of days in a month) Write a program that prompts the user to enter the month and year and
+              displays the number of days in the month.
             </p>
-            <p><a
-                href="https://www.cancer.org/healthy/cancer-causes/diet-physical-activity/body-weight-and-cancer-risk/adult-bmi.html">Normal
-                Weight Ranges: Body Mass Index (BMI)</a>
-            </p>
-            <p class="lead fs-6">For example, if a person is 5 feet and 10 inches, you will enter 5 for feet and 10 for
-              inches.</p>
-            <p class="lead fs-6">Here is the pseudocode necessary to complete the code:</p>
-          </div>
-          <div class="card-body bg-primary bg-gradient">
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item fw-bold">Input weight in pounds</li>
-                <li class="list-group-item fw-bold">Input height in feet</li>
-                <li class="list-group-item fw-bold">Input height in inches</li>
-                <li class="list-group-item fw-bold">Print BMI Calculation - Formula: weight (lb) / [height (in)]2 x 703
-                </li>
-                <li class="list-group-item fw-bold">Print BMI Index determination</li>
-              </ul>
+            <div class="card-body bg-primary bg-gradient">
+              <div class="card">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item fw-bold">For example, if the user entered month 2 and year 2012, the
+                    program
+                    should display that February 2012 had 29 days.</li>
+                  <li class="list-group-item fw-bold">If the user entered month 3 and year 2015, the&nbsp; program
+                    should
+                    display that March 2015 had 31 days</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -49,28 +42,22 @@
       <div class="col-lg-6 mt-4">
         <div class="card text-center">
           <div class="card-header bg-secondary.bg-gradient">
-            <h3 class="fw-bold underline">Workspace</h3>
+            <h3 class="fw-bold">Workspace</h3>
             <p class="lead fs-6">Use Javascript to update the below text using the script.js file:</p>
           </div>
           <div class="card-body bg-primary">
             <div class="card">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item fw-bold">
-                  Please enter your current weight:
-                  <input type="number" id="weight-in-pounds" />
+                  Please enter the calendar month:
+                  <input type="number" id="calendar-month" />
                 </li>
                 <li class="list-group-item fw-bold">
-                  Please enter your height, in feet: <input type="number" id="height-in-feet" />
-                </li>
-                <li class="list-group-item fw-bold">
-                  Please enter your (leftover) height, in inches: <input type="number" id="height-in-inches" />
+                  Please enter the calendar year: <input type="number" id="calendar-year" />
                   <button id="calculate">Calculate</button>
                 </li>
                 <li class="list-group-item fw-bold">
-                  Your BMI Calculation is <span id="bmi-calculation">0.00</span>
-                </li>
-                <li class="list-group-item fw-bold">
-                  Your BMI Index is <span id='bmi-determination' class="fw-normal fst-italic">Undetermined</span>
+                  <span id='days-in-month' class="fw-normal">Number of Days is Undermined</span>
               </ul>
             </div>
           </div>
