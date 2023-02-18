@@ -8,6 +8,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
 
 </head>
 
@@ -25,12 +26,16 @@
             <div class="card-body bg-primary bg-gradient">
               <div class="card">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item fw-bold">For example, if the user entered month 2 and year 2012, the
-                    program
-                    should display that February 2012 had 29 days.</li>
-                  <li class="list-group-item fw-bold">If the user entered month 3 and year 2015, the&nbsp; program
-                    should
-                    display that March 2015 had 31 days</li>
+                  <li class="list-group-item fw-bold">
+                    <p>
+                      <code><strong>For example, if the user entered month 2 and year 2012, the program should display that February 2012 had 29 days.</strong></code>
+                    </p>
+                  </li>
+                  <li class="list-group-item fw-bold">
+                    <p>
+                      <code><strong>If the user entered month 3 and year 2015, the&nbsp; program should display that March 2015 had 31 days</strong></code>
+                    </p>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -54,13 +59,194 @@
                 </li>
                 <li class="list-group-item fw-bold">
                   Please enter the calendar year: <input type="number" id="calendar-year" />
-                  <button id="calculate">Calculate</button>
+                  <button id="calculate" class="btn btn-primary">Calculate</button>
+                </li>
+                <li class="list-group-item">
+                  Number of Days is <span id='days-in-month' class="fst-italic">Undermined</span>
                 </li>
                 <li class="list-group-item fw-bold">
-                  <span id='days-in-month' class="fw-normal">Number of Days is Undermined</span>
+                  <!-- Button trigger modal -->
+                  <button type="button" id="btn-unit-tests" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#unitTestModal">
+                    Run Unit Tests
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit Test Modal -->
+  <div class="modal fade" id="unitTestModal" tabindex="-1" aria-labelledby="unitTestModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="unitTestModalLabel">Module 2 Assignment 2: Unit Test Outcomes</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <!-- Unit Test 1 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #1</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testone-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">month = 1 </li>
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">year = 1999
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        Days = <span id="expected-outcome-testone-days"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        Days = <span id='realized-outcome-testone-days'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 1 -->
+              <!-- Unit Test 2 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #2</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testtwo-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">month = 8</li>
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">year = 1567
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        Days = <span id="expected-outcome-testtwo-days"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        Days = <span id='realized-outcome-testtwo-days'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 2 -->
+              <!-- Unit Test 3 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #4</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testthree-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">month = 2</li>
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">year = 1776
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        Days = <span id="expected-outcome-testthree-days"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        Days = <span id='realized-outcome-testthree-days'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 3 -->
+              <!-- Unit Test 4 -->
+              <div class="col-lg-3 mt-4">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="fw-bold">Unit Test #3</h3>
+                  </div>
+                  <div class="card-body" style="--bs-bg-opacity: .25;">
+                    <h5 class="card-title" id='testfour-title'>Test Not Run</h5>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">
+                      <p class="card-text">Test parameters are found below</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">month = 2</li>
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">year = 2022
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Expected Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-info" style="--bs-bg-opacity: .25;">
+                        Days = <span id="expected-outcome-testfour-days"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card">
+                    <div class="card-body bg-secondary fw-bold" style="--bs-bg-opacity: .25;">Realized Outcome</div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item fst-italic bg-warning" style="--bs-bg-opacity: .25;">
+                        Days = <span id='realized-outcome-testfour-days'></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Unit Test 4 -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -71,11 +257,14 @@
   page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
   teal, blue, blurple, magenta, pink!
   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
   <script src="script.js"></script>
+  <script src="unit-tests.js"></script>
   <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
 </body>
 
